@@ -1,12 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+    <title>Formulário de Cadastro</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="card" >
+            <h1>Formação Tech Itaú Unibanco SA.</h1>
+            <h2>Cadastro</h2>
+            <p>Complete as informações para realizar seu cadastro.</p>
+            <p class="obrigatorio">campos obrigatórios*</p>
+
+
+            <!--Form de dados do formulário -->
+            <form action="https://formspree.io/f/mjvjlnvw"
+            method="POST">
+                <div class="label-float">
+                    <input type="text" id="nome" paceholder="" required>
+                    <label id="labelNome" for="nome">Nome*</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="cpf" paceholder="" required>
+                    <label id="labelCpf" for="cpf">CPF*</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" id="rg" paceholder="">
+                    <label for="rg">RG</label>
+                </div>
+
+                <!--   INICIO da div do Select, caixa de seleção de genero  -->
+                <div class="campo">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo">
+                        <option selected disabled value="">Selecione</option>  <!-- selected disabled value="" seleciona o que será apresentado e desabilita o valor-->
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                    <!-- FIM da div Select Genero-->
+                    
+
+                </div>
+                <div class="label-float">
+                    <input type="text" id="endereco" paceholder="" required>
+                    <label id="labelEndereco" for="endereco">Endereço*</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="numero" paceholder="" required>
+                    <label id="labelNumero" for="numero">Numero*</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="bairro" paceholder="">
+                    <label for="bairro">Bairro</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="cidade" paceholder="">
+                    <label for="cidade">Cidade</label>
+                </div>
+
+                <!--   INICIO da div do Select, caixa de seleção dos estados  -->
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado"  />
+                    <option value="selecione">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <!--   FIM da div do Select -->
+
+                <div class="label-float">
+                    <input type="text" id="cep" paceholder="" maxlength="8">
+                    <label for="cep">CEP</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="telefone" paceholder="" maxlength="11">
+                    <label for="telefone">Telefone Fixo</label>
+                </div>
+
+                <div class="label-float">
+                    <input type="text" id="celular" paceholder="" maxlength="12" required>
+                    <label id="labelCelular" for="celular">Telefone Celular</label>
+                </div>
+
+
+                <!-- Botão  -->
+                <div class="justify-center">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                </div>
+                <!--FIM Botão -->
+            </form>
+            <!-- FIM - Form de dados do formulário -->
+
+        </div>
+    </div>
+
+    <!-- Elemento Footer que representa o rodapé -->
+    <footer>
+
+        <div class="rodape">
+            <p class="texto-itau">© 2021 ITAÚ | BANCO DIGITAL DO BRASIL. CNPJ: 60.872.504/0001-23. Todos os direitos
+                reservados</p>
+            <ul class="link">
+                <li><a href="https://www.itau.com.br/itaubba-pt/para-quem/tech/" target="blank">Programa Formação Tech Itaú</a></li>
+                <li><a href="https://www.gama.academy/" target="blank">Gama Academy</a></li>
+                <li><a
+                        href="https://www.linkedin.com/in/jefferson-tupinambá-5719aa35?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BjxuscySPTSaD7dYFPHJuDA%3D%3D" target="blank">Linkedin
+                        - Jefferson de Menezes Tupinambá</a></li>
+            </ul>
+        </div>
+
+    </footer>
+        <!-- FIM - Elemento Footer que representa o rodapé -->
 </body>
+
+<!-- Script para executar o JavaScript -->
+<script src="./formulario.js"></script>
+
 </html>
